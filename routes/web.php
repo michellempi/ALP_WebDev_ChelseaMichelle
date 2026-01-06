@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('payment-methods', PaymentMethodController::class);
         Route::resource('shipping-methods', ShippingMethodController::class);
         Route::resource('promos', PromoController::class);
-
+//resource buat smua route crud
         Route::get('orders', [AdminOrderController::class, 'index'])->name('orders.index');
         Route::get('orders/{order}', [AdminOrderController::class, 'show'])->name('orders.show');
         Route::post('orders/{order}/status', [AdminOrderController::class, 'updateStatus'])->name('orders.update-status')->where('order', '[0-9]+');
